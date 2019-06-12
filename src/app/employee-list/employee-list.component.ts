@@ -7,14 +7,16 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  // Temp
-  public employeeList;
+
+  public employeeList = [];
 
   constructor(private _employeeService : EmployeeService) {
+    
   }
 
   ngOnInit() {
-    this.employeeList = this._employeeService.getEmployee();
+    this._employeeService.getEmployee()
+      .subscribe(data => this.employeeList = data);
   }
 
 }
