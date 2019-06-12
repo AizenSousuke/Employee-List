@@ -1,0 +1,9 @@
+<h3>Employee Detail</h3>
+<ul *ngFor="let employee of employeeList">
+  <li>
+    <h5><u>Details</u></h5>
+    <div>
+      {{ "Name: " + employee.name }} {{ "Age: " + employee.age }}
+    </div>
+  </li>
+</ul>
