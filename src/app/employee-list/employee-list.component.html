@@ -1,5 +1,5 @@
 <h3>Employee List</h3>
 <ul *ngFor="let employee of employeeList">
-  <li>{{ employee.name }}</li>
+  <a href="/employee/{{employee.name}}"><li>{{ employee.name }}</li></a>
 </ul>
 <p *ngIf="errorMessage" style="color: red">{{ errorMessage.message }}</p>

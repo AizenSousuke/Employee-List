@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-detail',
@@ -10,8 +11,12 @@ export class EmployeeDetailComponent implements OnInit {
 
   public employeeList = [];
   public errorMessage;
+  public chosenEmployee;
 
-  constructor(private _employeeService : EmployeeService) { 
+  constructor(
+    private _employeeService : EmployeeService,
+    private route : Router
+    ) { 
     
   }
 
@@ -19,6 +24,10 @@ export class EmployeeDetailComponent implements OnInit {
     this._employeeService.getEmployee()
       .subscribe(data => this.employeeList = data,
                   error => this.errorMessage = error);
-  }
 
+    // 2nd obj in array, find the employee
+    console.log(this.route.url.split('/'));
+    this.chosenEmployee = this.route.url.split('/')[2];
+    console.log(this.chosenEmployee);
+  }
 }
