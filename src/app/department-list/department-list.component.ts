@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-department-list',
@@ -16,13 +16,25 @@ export class DepartmentListComponent implements OnInit {
     { "id" : 5, "name" : "Ruby" }
   ]
 
-  constructor(private router : Router) { }
+  public selectedId: number;
+
+  constructor(private router : Router,
+              private route : ActivatedRoute 
+  ) { }
 
   ngOnInit() {
+    // Subscription to paramMap approach
+    this.route.paramMap.subscribe((params : ParamMap) => {
+      let id = parseInt(params.get('id'));
+      this.selectedId = id;
+    })
   }
 
   onSelect(department) {
     this.router.navigate(['/department', department.id]);
   }
 
+  isSelected(department) {
+    return department.id === this.selectedId;
+  }
 }

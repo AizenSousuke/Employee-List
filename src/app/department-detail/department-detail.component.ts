@@ -35,4 +35,13 @@ export class DepartmentDetailComponent implements OnInit {
     let nextId = this.departmentId + 1;
     this.router.navigate(['/department', nextId]);
   }
+
+  gotoDepartment() {
+    // Check if department id is there. Else, set it to null.
+    let selectedID = this.departmentId ? this.departmentId : null;
+    this.router.navigate(['/department', {
+      // Key-value pair
+      id : selectedID
+    }])
+  }
 }
