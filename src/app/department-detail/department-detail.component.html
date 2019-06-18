@@ -1,0 +1,7 @@
+<h3>Department Detail</h3>
+<p *ngIf="departmentId; else nothing">
+    You selected department id: {{ departmentId }}.
+</p>
+<ng-template #nothing>
+    You didn't select any department.
+</ng-template>

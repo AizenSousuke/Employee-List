@@ -1,4 +1,4 @@
-<h1>Employee Detail</h1>
+<h3>Employee Detail</h3>
 <ul *ngFor="let employee of employeeList">
   <li>
     <h5><u>Details</u></h5>
@@ -7,11 +7,8 @@
     </div>
   </li>
 </ul>
-<p *ngIf="errorMessage" style="color: red">{{ errorMessage.message }}</p>
-
-<!--
 <div *ngIf="chosenEmployee">
   <h1>Show only selected employee</h1>
-  <div>{{ chosenEmployee }}</div>
+  <div>{{ "Name: " + chosenEmployee }}</div>
 </div>
--->
+<p *ngIf="errorMessage" style="color: red">{{ errorMessage.message }}</p>

@@ -28,6 +28,5 @@ export class EmployeeDetailComponent implements OnInit {
     // 2nd obj in array, find the employee
     console.log(this.route.url.split('/'));
     this.chosenEmployee = this.route.url.split('/')[2];
-    console.log(this.chosenEmployee);
   }
 }

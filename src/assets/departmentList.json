@@ -1,0 +1,7 @@
+[
+    { "id" : 1, "department" : "bootstrap" },
+    { "id" : 2, "department" : "angular" },
+    { "id" : 3, "department" : "MongoDB" },
+    { "id" : 4, "department" : "node" },
+    { "id" : 5, "department" : "Ruby" }
+]
