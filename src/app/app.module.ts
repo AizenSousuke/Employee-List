@@ -10,6 +10,8 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
     EmployeeListComponent,
     EmployeeDetailComponent,
     DepartmentDetailComponent,
-    DepartmentListComponent
+    DepartmentListComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,

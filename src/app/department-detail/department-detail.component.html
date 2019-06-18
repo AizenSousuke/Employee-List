@@ -5,12 +5,17 @@
 <ng-template #nothing>
     You didn't select any department.
 </ng-template>
+<p>
+    <button (click)="showOverview()" type="button" class="btn btn-primary">Overview</button>
+    <button (click)="showContact()" type="button" class="btn btn-primary">Contact</button>
+</p>
+<router-outlet></router-outlet>
 <div>
-    <button (click)="goPrevious()">Previous</button>
+    <button (click)="goPrevious()" type="button" class="btn btn-primary">Previous</button>
 </div>
 <div>
-    <button (click)="goNext()">Next</button>
+    <button (click)="goNext()" type="button" class="btn btn-primary">Next</button>
 </div>
 <div>
-    <button (click)="gotoDepartment()">Back</button>
+    <button (click)="gotoDepartment()" type="button" class="btn btn-secondary">Back</button>
 </div>

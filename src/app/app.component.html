@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
     <base href="/">
 </head>
 <body>
-    <div><a [routerLink]="[ '/employeelist' ]">Employee List</a></div>
-    <div><a [routerLink]="[ '/employeedetail' ]">Employee Detail</a></div>
-    <div><a [routerLink]="[ '/department-list' ]">Department List</a></div>
-    <div><a [routerLink]="[ '/department-list/:id' ]">Department Detail</a></div>
+    <div><button [routerLink]="[ '/employeelist' ]"  type="button" class="btn btn-primary">Employee List</button></div>
+    <div><button [routerLink]="[ '/employeedetail' ]"  type="button" class="btn btn-primary">Employee Detail</button></div>
+    <div><button [routerLink]="[ '/department-list' ]"  type="button" class="btn btn-primary">Department List</button></div>
+    <div><button [routerLink]="[ '/department-list/:id' ]"  type="button" class="btn btn-primary">Department Detail</button></div>
     <router-outlet></router-outlet>
 </body>
 </html>
