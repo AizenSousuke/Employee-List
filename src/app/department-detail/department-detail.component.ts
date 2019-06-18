@@ -39,8 +39,8 @@ export class DepartmentDetailComponent implements OnInit {
   gotoDepartment() {
     // Check if department id is there. Else, set it to null.
     let selectedID = this.departmentId ? this.departmentId : null;
-    this.router.navigate(['/department', {
-      // Key-value pair
+    this.router.navigate(['../', {
+      // Key-value pair (Optional Router Parameter)
       id : selectedID
     }])
   }
