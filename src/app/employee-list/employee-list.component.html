@@ -1,5 +1,10 @@
 <h3>Employee List</h3>
+<!--
 <ul *ngFor="let employee of employeeList">
   <a href="/employee/{{employee.name}}"><li>{{ employee.name }}</li></a>
 </ul>
+-->
+<div *ngFor="let employee of employeeList">
+  <a class="btn btn-primary" href="/employee/{{employee.name}}">{{ employee.name }}</a>
+</div>
 <p *ngIf="errorMessage" style="color: red">{{ errorMessage.message }}</p>
