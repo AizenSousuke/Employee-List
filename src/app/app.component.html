@@ -9,10 +9,24 @@
     <base href="/">
 </head>
 <body>
-    <div><button [routerLink]="[ '/employeelist' ]"  type="button" class="btn btn-primary">Employee List</button></div>
-    <div><button [routerLink]="[ '/employeedetail' ]"  type="button" class="btn btn-primary">Employee Detail</button></div>
-    <div><button [routerLink]="[ '/department-list' ]"  type="button" class="btn btn-primary">Department List</button></div>
-    <div><button [routerLink]="[ '/department-list/:id' ]"  type="button" class="btn btn-primary">Department Detail</button></div>
-    <router-outlet></router-outlet>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <button [routerLink]="[ '/employeelist' ]"  type="button" class="btn btn-primary">Employee List</button>
+                    <button [routerLink]="[ '/employeedetail' ]"  type="button" class="btn btn-primary">Employee Detail</button>
+                    <button [routerLink]="[ '/department-list' ]"  type="button" class="btn btn-primary">Department List</button>
+                    <button [routerLink]="[ '/department-list/:id' ]"  type="button" class="btn btn-primary">Department Detail</button>
+                </div>
+                <div class="row">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
